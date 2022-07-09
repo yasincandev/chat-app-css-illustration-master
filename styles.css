@@ -1,0 +1,365 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+:root {
+  /*text*/
+
+  --app-heading: hsl(276, 100%, 81%);
+  --left-chat: hsl(276, 55%, 52%);
+  --right-chat: hsl(271, 15%, 43%);
+  --placeholder-text: hsl(206, 6%, 79%);
+  --main-heading: hsl(271, 36%, 24%);
+  --paragraph: hsl(270, 7%, 64%);
+
+  /* gradients */
+
+  --light-magenta: hsl(293, 100%, 63%);
+  --light-violet: hsl(264, 100%, 61%);
+
+  /* Secondary*/
+
+  --app-background: hsl(270, 20%, 96%);
+  --submit-button: hsl(271, 36%, 24%);
+  --radio-button-outline: hsl(289, 100%, 72%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  background-color: rgb(248, 248, 248);
+  overflow: hidden;
+  position: relative;
+}
+
+.background-desing-left {
+  background-image: linear-gradient(to top right, #8838ff, #e942ff);
+  height: 100%;
+  width: 35%;
+  border-radius: 0px 0px 50rem 50rem;
+  z-index: -1;
+  position: absolute;
+  top: -7%;
+  left: -8%;
+}
+
+.background-desing-right {
+  background-color: var(--app-background);
+  height: 100%;
+  width: 35%;
+  border-radius: 50rem 50rem 0px 0px;
+  z-index: -1;
+  position: absolute;
+  bottom: -10%;
+  right: -10%;
+}
+
+.container {
+  display: flex;
+  gap: 10rem;
+  align-items: center;
+  margin: 0 auto;
+  height: 100vh;
+  width: 1440px;
+  z-index: 1;
+}
+
+.app-ui {
+  border: 10px solid rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  border-radius: 25px;
+  background-color: var(--app-background);
+  margin-left: 10rem;
+}
+
+.notch {
+  margin-bottom: auto;
+  width: 150px;
+  height: 20px;
+  background-color: white;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.app-head {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-radius: 20px 20px 5px 5px;
+  background-image: linear-gradient(to left, #e942ff, #8838ff);
+}
+
+.profile {
+  padding-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  width: 100%;
+}
+
+.span-top {
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.avatar img {
+  margin-left: 1rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 2rem;
+  border: 1px solid white;
+}
+
+.name h3 {
+  font-size: 11px;
+  font-weight: 500;
+}
+.name {
+  color: white;
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.name p {
+  font-size: 8px;
+  font-weight: 400;
+  opacity: 70%;
+}
+
+.dots {
+  color: white;
+  margin-left: auto;
+}
+
+.dots:after {
+  content: "\2807";
+}
+
+.chat-interface {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 400px;
+  width: 250px;
+  font-size: 9px;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.left-top {
+  color: var(--left-chat);
+  width: 150px;
+  gap: 0.5rem;
+  border-radius: 10px;
+  font-size: 9px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.left-messages-first {
+  line-height: 0.7rem;
+  border-radius: 5px 15px 15px 5px;
+  background-color: hsl(274, 37%, 93%);
+  padding: 0.5rem;
+}
+
+.left-messages-second {
+  border-radius: 5px 15px 15px 5px;
+  background-color: hsl(274, 37%, 93%);
+  padding: 0.5rem;
+}
+
+.right-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-left: auto;
+}
+
+.dogs {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.dogs img {
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+}
+
+.right-first {
+  color: var(--right-chat);
+  margin-left: auto;
+  font-weight: 400;
+  border-radius: 10px 5px 5px 10px;
+  background-color: hsl(0, 0%, 100%);
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+.right-second {
+  color: var(--right-chat);
+  font-weight: 400;
+  border-radius: 10px 5px 5px 10px;
+  background-color: hsl(0, 0%, 100%);
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  margin-left: auto;
+}
+
+.left-bottom-first {
+  line-height: 0.7rem;
+  border-radius: 5px 15px 15px 5px;
+  background-color: hsl(274, 37%, 93%);
+  padding: 0.5rem;
+  color: var(--left-chat);
+  width: 70%;
+}
+
+.left-bottom-second {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+  gap: 0.4rem;
+  border-radius: 5px 15px 15px 5px;
+  color: var(--left-chat);
+  width: 80%;
+}
+
+.first-photo {
+  display: flex;
+  justify-content: space-between;
+  color: var(--right-chat);
+  font-size: 11px;
+  font-weight: 400;
+  border-radius: 10px 10px 10px 5px;
+  background-image: linear-gradient(to left top, #8838ff, #e942ff);
+  padding: 0.6rem;
+  color: #d89eff;
+}
+
+.second-photo {
+  display: flex;
+  color: var(--right-chat);
+  font-size: 11px;
+  font-weight: 400;
+  border-radius: 10px 10px 10px 5px;
+  color: #d89eff;
+  background-image: linear-gradient(to left top, #8838ff, #e942ff);
+  padding: 0.6rem;
+}
+
+.walking-time h3 {
+  color: white;
+}
+
+.walking-time {
+  margin-left: 0.5rem;
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.circle {
+  border: 1px solid var(--radio-button-outline);
+  width: 15px;
+  height: 15px;
+  border-radius: 10rem;
+}
+
+.message-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 0.5rem;
+  margin-top: 0.4rem;
+}
+
+input {
+  border-radius: 30px;
+  font-size: 11px;
+  border: transparent;
+  width: 100%;
+  height: 40px;
+  padding: 1rem;
+}
+
+.send-button {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  background-color: var(--submit-button);
+  color: white;
+  border-radius: 50%;
+  position: absolute;
+  right: 20px;
+}
+
+.app-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.app-info h1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: var(--main-heading);
+}
+
+.app-info p {
+  line-height: 2rem;
+  font-weight: 400;
+  color: var(--paragraph);
+}
+
+@media only screen and (max-width: 750px) {
+  body {
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+    background-color: rgb(248, 248, 248);
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+  }
+
+  .background-desing-left {
+    background-image: linear-gradient(to top right, #8838ff, #e942ff);
+    height: 70%;
+    width: 70%;
+    border-radius: 0px 0px 50rem 50rem;
+    z-index: -1;
+    position: absolute;
+    left: -25%;
+  }
+
+  .background-desing-right {
+    background-color: var(--app-background);
+    height: 55%;
+    width: 40%;
+    border-radius: 50rem 50rem 0px 0px;
+    z-index: -1;
+    position: absolute;
+    bottom: -10%;
+    right: -10%;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+
+    z-index: 1;
+    width: 500px;
+
+    margin-top: 5rem;
+  }
+}
